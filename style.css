@@ -97,3 +97,5 @@ h1, h2, h3 { margin:0; }
 .pager { display:flex; flex-wrap:wrap; gap:12px; }
 .foot { font-size:13px; color:var(--soft); }
 @media (max-width: 640px) { .qa { margin-left:0; } .w-title { font-size:44px; } .t-title { font-size:34px; } .welcome { padding:28px 20px; } }
+
+.sublink { margin-top:6px; padding:10px 12px; border-radius:10px; }

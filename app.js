@@ -78,6 +78,7 @@ var STORE_KEY = KEY + (TRAINEE ? '-' + TRAINEE.toLowerCase() : '');
       '<div class="vtext"><div class="vmeta"><span class="step' + (after ? ' step-after' : '') + '">' + esc(it.step) + '</span><span class="tag" style="' + tagColors(v.ch) + '">' + esc(v.ch) + '</span></div>' +
       '<span class="vtitle' + (v.red ? ' red' : '') + '">' + esc(v.title) + '</span><span class="why">' + esc(v.why) + '</span>';
     if (v.note) h += '<div class="note' + (v.red ? ' note-red' : '') + '"><strong>' + esc(v.noteLabel || 'Key video.') + '</strong> ' + esc(v.note) + '</div>';
+    (v.links || []).forEach(function (l) { h += '<div class="res sublink"><div class="res-t"><span class="res-n">↳ ' + esc(l.title) + '</span><span class="why">' + esc(l.text || '') + '</span></div><a class="watch" href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(l.cta || 'Open website') + '</a></div>'; });
     h += '</div><div class="vbtns"><button class="qabtn' + (open ? ' on' : '') + '" data-a="qa" data-k="' + esc(it.k) + '" aria-expanded="' + open + '">Q&amp;A' + (it.qs.length ? ' (' + it.qs.length + ')' : '') + '</button>' +
       (it.url ? '<a class="watch" href="' + esc(it.url) + '" target="_blank" rel="noopener">▶ ' + esc(v.cta || 'Watch') + '</a>' : '<span class="soon">Link coming soon</span>') + '</div></div>';
     if (open) {
