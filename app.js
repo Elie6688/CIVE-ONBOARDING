@@ -128,7 +128,7 @@ var STORE_KEY = KEY + (TRAINEE ? '-' + TRAINEE.toLowerCase() : '');
 
   function introView() {
     return '<div class="intro" aria-label="Welcome video"><video id="intro-video" src="' + INTRO_VIDEO + '" autoplay muted playsinline preload="auto"></video>' +
-      '<button class="skip" data-a="skip">Skip intro →</button></div>';
+      '<div class="intro-btns"><button id="intro-sound" class="soundbtn" hidden>🔊 Click to start with sound</button><button class="skip" data-a="skip">Skip intro →</button></div></div>';
   }
 
   function render() {
@@ -143,6 +143,7 @@ var STORE_KEY = KEY + (TRAINEE ? '-' + TRAINEE.toLowerCase() : '');
     var v = document.getElementById('intro-video');
     if (!v) return;
     v.addEventListener('ended', finishIntro);
+    var sound = document.getElementById('intro-sound');
     var tryPlay = function () {
       if (introStarted) return; introStarted = true;
       v.muted = false;
@@ -151,7 +152,15 @@ var STORE_KEY = KEY + (TRAINEE ? '-' + TRAINEE.toLowerCase() : '');
         // The browser blocked sound before any click: keep the video playing silently,
         // and bring the sound in at the visitor's first click, tap or key press.
         v.muted = true; var q = v.play(); if (q && q.catch) q.catch(function () {});
-        introUnlock = function () { removeUnlock(); if (state.view === 'intro') { v.muted = false; var r = v.play(); if (r && r.catch) r.catch(function () {}); } };
+        if (sound) sound.hidden = false;
+        introUnlock = function (e) {
+          removeUnlock();
+          if (state.view !== 'intro') return;
+          if (sound) sound.hidden = true;
+          // The sound button restarts the video from the beginning with music; any other click just turns the sound on.
+          if (e && e.target && e.target.closest && e.target.closest('#intro-sound')) v.currentTime = 0;
+          v.muted = false; var r = v.play(); if (r && r.catch) r.catch(function () {});
+        };
         document.addEventListener('pointerdown', introUnlock, true); document.addEventListener('keydown', introUnlock, true);
       });
     };
