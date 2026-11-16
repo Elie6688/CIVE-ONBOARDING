@@ -122,6 +122,8 @@ var MODULES = [
       { url: yt('EBM-9q7UW-s'), ch: 'Building science', title: 'Flashing at windows (head, end dam and sill details)', why: 'Head flashing, end dams and sill pans drawn detail by detail, the way you will draw them in a CD set.' },
       { url: yt('KdhBPtqrQxQ'), ch: AS, title: 'Why you need an air barrier in your roof', why: 'Carrying the air barrier from the wall into the roof assembly.' },
       { url: yt('3hOY38uOXxE'), ch: AS, title: 'Exterior insulation for roofs (3 different ways)', why: 'Roof assemblies and where the insulation goes.' },
+      { url: yt('lRFvaxJI5eQ'), ch: 'Building science', title: 'What’s the best way to waterproof a flat roof?', why: 'Low-slope roof membranes compared, so you can choose and detail the right one for a commercial roof.' },
+      { url: 'https://www.youtube.com/watch?v=Lptv5mAGPSo&t=203s', ch: 'Building science', title: 'The problem with liquid applied roofing', why: 'Where liquid-applied membranes fail and what to watch for when one is specified. Starts at 3:23.' },
       { url: yt('-6y2ooXxqfU'), ch: AS, title: 'Flat roof parapet details explained (for architects and contractors)', why: 'A detail you will draw on almost every commercial project.' },
       { url: yt('dHkLeJp1Of0'), ch: AS, title: 'Leak-free stucco parapets for any climate', why: 'The parapet detail again, this time with stucco cladding.' },
       { url: yt('nZjdJ97Le1Y'), ch: 'Envelope', title: 'Roof parapet metal coping', why: 'How the metal coping caps the parapet: sloped top, cleats, drip edges and how the roof membrane laps under it.' },
