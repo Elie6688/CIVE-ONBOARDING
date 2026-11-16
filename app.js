@@ -1,20 +1,26 @@
 // CIVE New Architect Onboarding: standalone website.
 // Module content lives in data.js. Set TRAINER_EMAIL to show the "Email to trainer" buttons.
 var TRAINER_EMAIL = '';
-var INTRO_VIDEO = 'assets/welcome-to-cive.mp4';
-var LOGO = 'assets/cive-logo.png';
+var BASE = window.SITE_BASE || '';
+var TRAINEE = window.TRAINEE || null;
+var INTRO_VIDEO = BASE + 'assets/welcome-to-cive.mp4';
+var LOGO = BASE + 'assets/cive-logo.png';
+var STORE_KEY = KEY + (TRAINEE ? '-' + TRAINEE.toLowerCase() : '');
 
 (function () {
   var app = document.getElementById('app');
-  var state = { view: 'intro', sel: 0, done: {}, qa: {}, drafts: {}, open: {}, music: false };
+  var state = { view: 'intro', sel: 0, done: {}, qa: {}, drafts: {}, open: {}, music: false, at: 0, synced: null };
   var music = null, introUnlock = null, introStarted = false;
 
   try {
-    var raw = window.localStorage.getItem(KEY);
-    if (raw) { var s = JSON.parse(raw); state.done = s.done || {}; state.qa = s.qa || {}; state.sel = typeof s.sel === 'number' ? s.sel : 0; }
+    var raw = window.localStorage.getItem(STORE_KEY);
+    if (raw) { var s = JSON.parse(raw); state.done = s.done || {}; state.qa = s.qa || {}; state.sel = typeof s.sel === 'number' ? s.sel : 0; state.at = s.at || 0; }
   } catch (e) {}
   function persist() {
-    try { window.localStorage.setItem(KEY, JSON.stringify({ sel: state.sel, done: state.done, qa: state.qa })); } catch (e) {}
+    state.at = Date.now();
+    var data = { sel: state.sel, done: state.done, qa: state.qa, at: state.at };
+    try { window.localStorage.setItem(STORE_KEY, JSON.stringify(data)); } catch (e) {}
+    if (TRAINEE && Sync.enabled()) { var M = model(); data.pct = M.pct; data.count = M.count; data.total = M.total; Sync.push(TRAINEE, data); state.synced = true; }
   }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
 
@@ -42,6 +48,7 @@ var LOGO = 'assets/cive-logo.png';
     var h = '<div class="progress card-box"><div class="pc-top"><span class="muted-s">Your progress</span><span class="pct">' + M.pct + '%</span></div>' +
       '<div class="bar"><div class="bar-fill" style="width:' + M.pct + '%"></div></div>' +
       '<div class="pc-row"><span>' + M.count + ' of ' + M.total + ' items done</span><button class="linkbtn" data-a="reset">Reset</button></div>' +
+      (TRAINEE ? '<div class="pc-row"><span>' + (Sync.enabled() ? (state.synced === false ? 'Could not load saved progress' : 'Progress saved online for ' + esc(TRAINEE)) : 'Saved on this computer only') + '</span></div>' : '') +
       '<div class="pc-row pc-q"><span>' + (M.qTotal === 1 ? '1 question saved' : M.qTotal + ' questions saved') + '</span>';
     if (TRAINER_EMAIL && M.qTotal) h += '<a class="pc-mail" href="' + esc(mailto(TRAINER_EMAIL, 'Onboarding questions', M.allLines)) + '">Email all my questions</a>';
     return h + '</div></div>';
@@ -50,7 +57,7 @@ var LOGO = 'assets/cive-logo.png';
   function welcomeView(M) {
     return '<section class="welcome card-box" aria-label="Welcome">' +
       '<div class="w-logo"><img src="' + LOGO + '" alt="CIVE logo"></div>' +
-      '<div class="w-text"><div class="eyebrow">Welcome to the team</div><h1 class="w-title">Welcome to CIVE</h1>' +
+      '<div class="w-text"><div class="eyebrow">Welcome to the team</div><h1 class="w-title">Welcome to CIVE' + (TRAINEE ? ', ' + esc(TRAINEE) : '') + '</h1>' +
       '<p class="w-lead">We’re so glad you’re here. You are now part of <strong>CIVE</strong>, an architecture, engineering and construction (AEC) firm headquartered in Houston, Texas, where architects, engineers and builders work side by side to take projects from the first sketch to the finished building.</p>' +
       '<p class="w-body">This dashboard is your first project with us. It walks you through how architecture is practiced in the US, how to find and read the building codes, and how we detail and document our buildings. Go one module at a time, write down every question, and bring them to our live sessions. Nobody expects you to know it all on day one, and every one of us started where you are now.</p>' +
       '<div class="chips"><span class="chip c-blue">11 modules</span><span class="chip c-orange">Live sessions with the CIVE team</span><span class="chip c-green">Learn at your own pace</span></div>' +
@@ -90,7 +97,7 @@ var LOGO = 'assets/cive-logo.png';
 
   function trainingView(M) {
     var cur = M.mods[state.sel], m = cur.m;
-    var h = '<header class="head"><div class="head-left"><div class="eyebrow grey">CIVE, Inc · New Architect Onboarding</div>' +
+    var h = '<header class="head"><div class="head-left"><div class="eyebrow grey">CIVE, Inc · New Architect Onboarding' + (TRAINEE ? ' · ' + esc(TRAINEE) : '') + '</div>' +
       '<h1 class="t-title">Your path to designing buildings in the US</h1>' +
       '<p class="muted">Step by step, you will learn to find the code, understand it, and turn it into drawings that pass review. Each module pairs short videos with a live session with the CIVE team. Note your questions under any video as you go, and bring them to the session.</p>' +
       '<div><button class="ghost" data-a="welcome">← Welcome page</button></div></div>' + progressCard(M) + '</header>';
@@ -217,4 +224,15 @@ var LOGO = 'assets/cive-logo.png';
   });
 
   render();
+  if (TRAINEE && SYNC.sheetCsv) {
+    Sync.pull(TRAINEE).then(function (remote) {
+      if (remote && (remote.at || 0) > (state.at || 0)) {
+        state.done = remote.done || {}; state.qa = remote.qa || {}; state.at = remote.at || 0;
+        if (typeof remote.sel === 'number') state.sel = remote.sel;
+        try { window.localStorage.setItem(STORE_KEY, JSON.stringify({ sel: state.sel, done: state.done, qa: state.qa, at: state.at })); } catch (e) {}
+      }
+      state.synced = remote !== null || state.synced;
+      if (state.view !== 'intro') render();
+    });
+  }
 })();
