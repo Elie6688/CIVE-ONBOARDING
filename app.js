@@ -128,7 +128,6 @@ var STORE_KEY = KEY + (TRAINEE ? '-' + TRAINEE.toLowerCase() : '');
 
   function introView() {
     return '<div class="intro" aria-label="Welcome video"><video id="intro-video" src="' + INTRO_VIDEO + '" playsinline preload="auto"></video>' +
-      '<button id="intro-gate" class="gate" hidden><span class="gate-ic"><svg width="34" height="34" viewBox="0 0 24 24" aria-hidden="true"><polygon points="7 4 20 12 7 20 7 4" fill="#fff"/></svg></span><span class="gate-t">Welcome to CIVE</span><span class="gate-s">Click to play the welcome video with sound</span></button>' +
       '<button class="skip" data-a="skip">Skip intro →</button></div>';
   }
 
@@ -144,20 +143,18 @@ var STORE_KEY = KEY + (TRAINEE ? '-' + TRAINEE.toLowerCase() : '');
     var v = document.getElementById('intro-video');
     if (!v) return;
     v.addEventListener('ended', finishIntro);
-    var gate = document.getElementById('intro-gate');
     var tryPlay = function () {
       if (introStarted) return; introStarted = true;
       v.muted = false;
       var p = v.play();
       if (p && p.catch) p.catch(function () {
-        // The browser blocks sound until the visitor clicks: show one big button instead of playing silently.
-        if (gate) gate.hidden = false;
+        // The browser blocked sound before any click: keep the video playing silently,
+        // and bring the sound in at the visitor's first click, tap or key press.
+        v.muted = true; var q = v.play(); if (q && q.catch) q.catch(function () {});
+        introUnlock = function () { removeUnlock(); if (state.view === 'intro') { v.muted = false; var r = v.play(); if (r && r.catch) r.catch(function () {}); } };
+        document.addEventListener('pointerdown', introUnlock, true); document.addEventListener('keydown', introUnlock, true);
       });
     };
-    if (gate) gate.addEventListener('click', function () {
-      gate.hidden = true; v.muted = false; v.currentTime = 0;
-      var r = v.play(); if (r && r.catch) r.catch(function () { v.muted = true; v.play(); });
-    });
     tryPlay();
     v.addEventListener('canplay', function () { if (v.paused && state.view === 'intro') { introStarted = false; tryPlay(); } });
     v.addEventListener('error', finishIntro);
