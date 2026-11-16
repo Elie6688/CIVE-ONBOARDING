@@ -127,7 +127,7 @@ var STORE_KEY = KEY + (TRAINEE ? '-' + TRAINEE.toLowerCase() : '');
   }
 
   function introView() {
-    return '<div class="intro" aria-label="Welcome video"><video id="intro-video" src="' + INTRO_VIDEO + '" playsinline preload="auto"></video>' +
+    return '<div class="intro" aria-label="Welcome video"><video id="intro-video" src="' + INTRO_VIDEO + '" autoplay muted playsinline preload="auto"></video>' +
       '<button class="skip" data-a="skip">Skip intro →</button></div>';
   }
 
