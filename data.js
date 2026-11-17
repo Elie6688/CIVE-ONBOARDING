@@ -82,10 +82,13 @@ var MODULES = [
     ] },
   { num: 6, short: 'Accessibility: ADA, TAS & FHA', title: 'Accessibility law and codes',
     goal: 'Three overlapping rule sets: the federal ADA, the building code’s own accessibility chapter (and TAS in Texas), and the Fair Housing Act for multifamily. Learn how they relate, the key dimensions, and the Accessible, Type A and Type B dwelling units, before the session covers toilet rooms and HUD safe harbors.',
+    noteTitle: 'ADA vs. TAS: what is the difference?',
+    note: 'The 2010 ADA Standards are federal and apply nationwide. They are enforced by the U.S. Department of Justice and through lawsuits, and there is no plan review. TAS 2012 is the Texas version of the same standards, with state changes, enforced by TDLR. In Texas, a project with an estimated construction cost of $50,000 or more must be registered with TDLR and get a plan review and an inspection by a Registered Accessibility Specialist (RAS). Design to both, and where they differ, follow the stricter one.',
     resTitle: 'Standards locations and websites',
     resources: [
       { title: 'Fair Housing Act Design Manual (FHADM)', text: 'HUD’s design manual for the seven FHA requirements, with dimensioned diagrams for multifamily units and common areas. Open the PDF in the CIVE folder, or read it on UpCodes.', url: FORMA + '12pL3LHyRaCmoYGvRmrp2w' + FORMA_END, alt: { cta: 'Open on UpCodes', url: 'https://up.codes/viewer/fair-housing-act-1998' } },
       { title: 'ANSI A117.1-1986 (ansi_a117.1_1986.pdf)', text: 'The technical standard the FHADM refers to for detailed dimensions and requirements. Read it alongside the FHADM. It is in the same folder.', url: FORMA + '12pL3LHyRaCmoYGvRmrp2w' + FORMA_END },
+      { title: 'Texas Accessibility Standards (TAS 2012)', text: 'The Texas version of the 2010 ADA Standards, published by TDLR (Texas Department of Licensing and Regulation). Use it on every Texas project.', url: 'https://www.tdlr.texas.gov/ab/2012abtas1.htm', cta: 'Open website' },
       { title: 'U.S. Access Board ADA guides', text: 'The 2010 ADA Standards explained chapter by chapter with clear illustrations. Better illustrated, so start here.', url: 'https://www.access-board.gov/ada/guides/', cta: 'Open website' },
       { title: 'ADA Standards on UpCodes', text: 'The full text of the ADA Standards, searchable.', url: 'https://up.codes/viewer/ada', cta: 'Open website' }
     ],
