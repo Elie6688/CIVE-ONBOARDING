@@ -120,6 +120,7 @@ var MODULES = [
       { title: 'Stucco details', text: 'Stucco wall, opening and parapet details.', url: FORMA + 'tmHSOGiDQmihXB-skQ6l5w' + FORMA_END },
       { title: 'UL tested assemblies and sound control test catalogue', text: 'Fire-rated and acoustic wall, floor and roof assemblies to reference on wall types.', url: FORMA + 'Sx7X3cBeSaiW6yA_6ytt_A' + FORMA_END },
       { title: 'Georgia-Pacific DensElement details', text: 'Georgia-Pacific design resources: CAD details for the DensElement Barrier System at openings, corners and transitions, to see how the WRB is detailed.', url: 'https://www.buildgp.com/resources/design', cta: 'Open website' },
+      { title: 'DensElement details (PDF, 58 sheets)', text: 'Georgia-Pacific’s DensElement Barrier System details in one PDF: wall sections, window and door openings, corners and transitions, showing where the liquid flashing goes.', url: 'https://elie6688.github.io/CIVE-ONBOARDING/assets/denselement-details.pdf', cta: 'Open PDF' },
       { title: 'Architectural Graphic Standards', text: 'The standard reference for typical construction details. Look here first when you need a detail you have not drawn before.', url: FORMA + '12pL3LHyRaCmoYGvRmrp2w' + FORMA_END }
     ],
     live: null,
