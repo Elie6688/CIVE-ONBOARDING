@@ -81,14 +81,13 @@ var MODULES = [
       { url: 'https://elie6688.github.io/CIVE-ONBOARDING/fire-access-roads.html', where: 'opens the presentation', cta: 'Start presentation', ch: CV, title: 'Designing fire apparatus access roads (CIVE presentation)', why: 'Fire lanes, hose lay, turning radii, turnarounds, hydrants and FDCs under IFC Section 503 and Appendix D, a site plan checklist, and an exercise on a CIVE fire lane plan. It opens as a slideshow: click or use the arrow keys to move between slides, and press F for full screen.', note: 'Fire access requirements change from one IFC edition to the next and with each AHJ’s amendments. Always check the AHJ’s adopted code before you lay out a fire lane.', red: true }
     ] },
   { num: 6, short: 'Accessibility: ADA, TAS & FHA', title: 'Accessibility law and codes',
-    quick: { title: 'ADA standards online', links: [
-      { label: 'U.S. Access Board ADA guides', note: 'Better illustrated. Start here.', url: 'https://www.access-board.gov/ada/guides/' },
-      { label: 'ADA Standards on UpCodes', note: 'Or read the full text here.', url: 'https://up.codes/viewer/ada' }
-    ] },
     goal: 'Three overlapping rule sets: the federal ADA, the building code’s own accessibility chapter (and TAS in Texas), and the Fair Housing Act for multifamily. Learn how they relate, the key dimensions, and the Accessible, Type A and Type B dwelling units, before the session covers toilet rooms and HUD safe harbors.',
+    resTitle: 'Standards locations and websites',
     resources: [
-      { title: 'Fair Housing Act Design Manual (FHADM)', text: 'HUD’s design manual for the seven FHA requirements, with dimensioned diagrams for multifamily units and common areas.', url: FORMA + '12pL3LHyRaCmoYGvRmrp2w' + FORMA_END },
-      { title: 'ANSI A117.1-1986 (ansi_a117.1_1986.pdf)', text: 'The technical standard the FHADM refers to for detailed dimensions and requirements. Read it alongside the FHADM. It is in the same folder.', url: FORMA + '12pL3LHyRaCmoYGvRmrp2w' + FORMA_END }
+      { title: 'Fair Housing Act Design Manual (FHADM)', text: 'HUD’s design manual for the seven FHA requirements, with dimensioned diagrams for multifamily units and common areas. Open the PDF in the CIVE folder, or read it on UpCodes.', url: FORMA + '12pL3LHyRaCmoYGvRmrp2w' + FORMA_END, alt: { cta: 'Open on UpCodes', url: 'https://up.codes/viewer/fair-housing-act-1998' } },
+      { title: 'ANSI A117.1-1986 (ansi_a117.1_1986.pdf)', text: 'The technical standard the FHADM refers to for detailed dimensions and requirements. Read it alongside the FHADM. It is in the same folder.', url: FORMA + '12pL3LHyRaCmoYGvRmrp2w' + FORMA_END },
+      { title: 'U.S. Access Board ADA guides', text: 'The 2010 ADA Standards explained chapter by chapter with clear illustrations. Better illustrated, so start here.', url: 'https://www.access-board.gov/ada/guides/', cta: 'Open website' },
+      { title: 'ADA Standards on UpCodes', text: 'The full text of the ADA Standards, searchable.', url: 'https://up.codes/viewer/ada', cta: 'Open website' }
     ],
     live: { title: 'Session 4 · Accessibility law and codes', topics: 'TAS 2012 / ADA 2010 · floor surfaces, clear floor and turning space · operable parts · parking · accessible routes · doors and gates · toilet rooms · Fair Housing Act safe harbors and the HUD design manual', deck: 'CIVE_Design_training_05 · 17 slides' },
     videos: [

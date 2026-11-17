@@ -106,3 +106,4 @@ h1, h2, h3 { margin:0; }
 .quick a { display:flex; flex-direction:column; gap:1px; text-decoration:none; padding:6px 0; }
 .quick-l { font-weight:600; font-size:14px; color:#1F4FD1; text-decoration:underline; }
 .quick-n { font-size:12.5px; color:#4A4E57; }
+.watch.alt { background:#fff; }
