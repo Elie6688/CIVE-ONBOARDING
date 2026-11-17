@@ -51,7 +51,6 @@ var STORE_KEY = KEY + (TRAINEE ? '-' + TRAINEE.toLowerCase() : '');
     var h = '<div class="progress card-box"><div class="pc-top"><span class="muted-s">Your progress</span><span class="pct">' + M.pct + '%</span></div>' +
       '<div class="bar"><div class="bar-fill" style="width:' + M.pct + '%"></div></div>' +
       '<div class="pc-row"><span>' + M.count + ' of ' + M.total + ' items done</span><button class="linkbtn" data-a="reset">Reset</button></div>' +
-      (TRAINEE ? '<div class="pc-row"><span>' + (Sync.enabled() ? (state.synced === false ? 'Could not load saved progress' : 'Progress saved online for ' + esc(TRAINEE)) : 'Saved on this computer only') + '</span></div>' : '') +
       '<div class="pc-row pc-q"><span>' + (M.qTotal === 1 ? '1 question saved' : M.qTotal + ' questions saved') + '</span>';
     if (TRAINER_EMAIL && M.qTotal) h += '<a class="pc-mail" href="' + esc(mailto(TRAINER_EMAIL, 'Onboarding questions', M.allLines)) + '">Email all my questions</a>';
     return h + '</div></div>';
