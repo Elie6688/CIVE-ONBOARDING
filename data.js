@@ -83,9 +83,7 @@ var MODULES = [
         links: [{ title: 'City of Houston Code of Ordinances (Municode)', text: 'Houston’s planning and development rules, including Chapter 26 for off-street parking and Chapter 42 for subdivisions and development. Houston has no zoning ordinance, but these chapters still set the site rules.', url: 'https://library.municode.com/tx/houston/codes/code_of_ordinances', cta: 'Open website' }] },
     ] },
   { num: 6, short: 'Accessibility: ADA, TAS & FHA', title: 'Accessibility law and codes',
-    goal: 'Three overlapping rule sets: the federal ADA, the building code’s own accessibility chapter (and TAS in Texas), and the Fair Housing Act for multifamily. Learn how they relate, the key dimensions, and the Accessible, Type A and Type B dwelling units, before the session covers toilet rooms and HUD safe harbors.',
-    noteTitle: 'ADA vs. TAS: what is the difference?',
-    note: 'The 2010 ADA Standards are federal and apply nationwide. They are enforced by the U.S. Department of Justice and through lawsuits, and there is no plan review. TAS 2012 is the Texas version of the same standards, with state changes, enforced by TDLR. In Texas, a project with an estimated construction cost of $50,000 or more must be registered with TDLR and get a plan review and an inspection by a Registered Accessibility Specialist (RAS). Design to both, and where they differ, follow the stricter one.',
+    goal: '',
     resTitle: 'Standards locations and websites',
     resources: [
       { title: 'Fair Housing Act Design Manual (FHADM)', text: 'HUD’s design manual for the seven FHA requirements, with dimensioned diagrams for multifamily units and common areas. Open the PDF in the CIVE folder, or read it on UpCodes.', url: FORMA + '12pL3LHyRaCmoYGvRmrp2w' + FORMA_END, alt: { cta: 'Open on UpCodes', url: 'https://up.codes/viewer/fair-housing-act-1998' } },
