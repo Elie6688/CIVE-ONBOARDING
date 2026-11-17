@@ -81,6 +81,10 @@ var MODULES = [
       { url: 'https://elie6688.github.io/CIVE-ONBOARDING/fire-access-roads.html', where: 'opens the presentation', cta: 'Start presentation', ch: CV, title: 'Designing fire apparatus access roads (CIVE presentation)', why: 'Fire lanes, hose lay, turning radii, turnarounds, hydrants and FDCs under IFC Section 503 and Appendix D, a site plan checklist, and an exercise on a CIVE fire lane plan. It opens as a slideshow: click or use the arrow keys to move between slides, and press F for full screen.', note: 'Fire access requirements change from one IFC edition to the next and with each AHJ’s amendments. Always check the AHJ’s adopted code before you lay out a fire lane.', red: true }
     ] },
   { num: 6, short: 'Accessibility: ADA, TAS & FHA', title: 'Accessibility law and codes',
+    quick: { title: 'ADA standards online', links: [
+      { label: 'U.S. Access Board ADA guides', note: 'Better illustrated. Start here.', url: 'https://www.access-board.gov/ada/guides/' },
+      { label: 'ADA Standards on UpCodes', note: 'Or read the full text here.', url: 'https://up.codes/viewer/ada' }
+    ] },
     goal: 'Three overlapping rule sets: the federal ADA, the building code’s own accessibility chapter (and TAS in Texas), and the Fair Housing Act for multifamily. Learn how they relate, the key dimensions, and the Accessible, Type A and Type B dwelling units, before the session covers toilet rooms and HUD safe harbors.',
     resources: [
       { title: 'Fair Housing Act Design Manual (FHADM)', text: 'HUD’s design manual for the seven FHA requirements, with dimensioned diagrams for multifamily units and common areas.', url: FORMA + '12pL3LHyRaCmoYGvRmrp2w' + FORMA_END },
