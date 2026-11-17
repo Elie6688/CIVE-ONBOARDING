@@ -13,7 +13,7 @@ var FORMA = 'https://acc.autodesk.com/docs/files/projects/f7fa77bd-93e5-4a90-88d
 var FORMA_END = '&viewModel=detail&moduleId=folders';
 var MODULES = [
   { num: 1, short: 'How US practice works', title: 'How architecture is practiced in the US',
-    goal: 'Who does what on a US commercial project: licensed architects, engineers, contractors and the owner; what the AIA is; basic vs. supplemental services; delivery methods; and how a project moves from pre-design to construction administration.',
+    goal: 'Who does what on a US commercial project: Architects, engineers, contractors and the owner; what the AIA is; basic vs. supplemental services; delivery methods; and how a project moves from pre-design to construction administration.',
     empty: 'This module is the live session. Right after it, start Module 2 to set up UpCodes before the code videos.',
     live: { title: 'Session 1 · US building industry roles', topics: 'State boards and the AIA · legal role of the architect and HSW · basic vs. supplemental services · delivery methods and IPD · LOD/LOS by phase · bidding and CA at CIVE', deck: 'CIVE_Design_training_01 · 24 slides' },
     videos: [] },
