@@ -162,7 +162,21 @@ var MODULES = [
         links: [
           { title: 'Specification types, with examples', text: 'Prescriptive, performance and proprietary specs with real examples, including an acoustical ceiling named as “Armstrong Ultima 1912, or approved equal” and basis of design.', url: 'https://deviationcheck.com/guides/specification-types/', cta: 'Read article' }
         ] },
-      { url: 'https://elie6688.github.io/CIVE-ONBOARDING/assets/drawings-and-specs.mp4?v=3', where: 'plays the CIVE video', ch: CV, title: 'Drawings and specifications: if you draw it, spec it (CIVE video, 2 min)', why: 'Why every item on the drawings needs a spec, the three ways to specify, examples for brick, acoustical ceilings and the weather-resistive barrier, and what to check before every issue.' },
+      { url: 'https://elie6688.github.io/CIVE-ONBOARDING/assets/drawings-and-specs.mp4?v=4', where: 'plays the CIVE video', ch: CV, title: 'Drawings and specifications: if you draw it, spec it (CIVE video, 2.5 min)', why: 'Why every item on the drawings needs a spec, the three ways to specify, examples for brick, acoustical ceilings and the weather-resistive barrier, where to find the test standards, and what to check before every issue.', list: { title: 'Where to find the test standards', items: [
+          'IBC Chapter 35, Referenced Standards: the master list of every standard the code uses (ASTM, UL, NFPA, ANSI), with its edition and the IBC sections that use it.',
+          'The material chapters say which standard each material must meet. Chapter 17 covers special inspections and tests during construction, not material standards.',
+          'Brick and CMU: Chapter 21, Section 2103 (ASTM C216 face brick, C90 CMU, C270 mortar).',
+          'Gypsum board: Chapter 25, Table 2506.2 (ASTM C1396).',
+          'Weather-resistive barrier: Chapter 14, Section 1403.2 (ASTM D226 felt, ASTM E2556 house wrap).',
+          'Combustible exterior wall parts: Chapter 14, Section 1402.5 (NFPA 285).',
+          'Interior finishes: Chapter 8, Section 803 (ASTM E84 / UL 723, NFPA 286).',
+          'Acoustical ceiling grid: Chapter 8, Section 808 (ASTM C635 and C636).',
+          'Fire-rated assemblies: Chapter 7 (ASTM E119 / UL 263).',
+          'Sound between dwelling units: Chapter 12, Section 1206 (ASTM E90 for STC, ASTM E492 for IIC).',
+          'Glazing: Chapter 24 (CPSC 16 CFR 1201, ANSI Z97.1). Roofing: Chapter 15, listed per roof covering.',
+          'Concrete, steel and wood: Chapters 19, 22 and 23 (ACI 318, AISC 360, NDS).',
+          'In practice: search the standard in UpCodes, check Part 1 “References” of the spec section, and check the manufacturer’s data sheet. Section numbers are from IBC 2021.'
+        ] } },
       { url: yt('aplnil0CGx8'), ch: 'USG', title: 'Add a UL fire-rated assembly to a Revit wall type (USG Assembly Builder)', why: 'Shows how the USG Assembly Builder plugin for Revit builds a wall type from a tested UL fire-rated assembly, so the layers, rating and UL design number in the model match the tested design.', noteLabel: 'Try it.', note: 'Pick a 1-hour and a 2-hour partition from the example set. Find a matching UL design and build both wall types in a practice Revit file. Check that the wall tag and the wall type schedule show the UL number and the rating.',
         links: [{ title: 'USG Assembly Builder plugin', text: 'Download the Revit plugin and search tested UL fire-rated and acoustical assemblies.', url: 'https://www.usg.com/en-US/software/assembly-builder', cta: 'Open website' }] },
       { url: yt('GTsau4Y9z9k'), ch: 'ARCAT', title: 'Find and specify a building product: details, BIM models and CSI specs', why: 'Learn how to use ARCAT to pull a manufacturer’s product data for the set: the CAD and Revit details, the BIM model, the submittal data and the CSI MasterFormat specification section.', noteLabel: 'Try it.', note: 'For one of your wall types, find the product on ARCAT or the manufacturer’s site. Download its detail, its BIM model and its CSI specification section (for gypsum board assemblies, Section 09 21 16). Note which spec section number goes on the wall type legend.',

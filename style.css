@@ -107,3 +107,7 @@ h1, h2, h3 { margin:0; }
 .quick-l { font-weight:600; font-size:14px; color:#1F4FD1; text-decoration:underline; }
 .quick-n { font-size:12.5px; color:#4A4E57; }
 .watch.alt { background:#fff; }
+.vlist { margin-top:6px; background:#F6F8FE; border:1px solid #C9D3F2; border-radius:10px; padding:12px 14px; }
+.vlist-h { font-weight:700; font-size:14px; color:#1A3F9E; margin-bottom:6px; }
+.vlist ul { margin:0; padding-left:20px; display:flex; flex-direction:column; gap:4px; }
+.vlist li { font-size:13.5px; color:#3D4048; }
