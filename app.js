@@ -16,11 +16,14 @@ var STORE_KEY = KEY + (TRAINEE ? '-' + TRAINEE.toLowerCase() : '');
     var raw = window.localStorage.getItem(STORE_KEY);
     if (raw) { var s = JSON.parse(raw); state.done = s.done || {}; state.qa = s.qa || {}; state.sel = typeof s.sel === 'number' ? s.sel : 0; state.at = s.at || 0; }
   } catch (e) {}
+  var lastSig = JSON.stringify([state.done, state.qa]);
   function persist() {
     state.at = Date.now();
     var data = { sel: state.sel, done: state.done, qa: state.qa, at: state.at };
     try { window.localStorage.setItem(STORE_KEY, JSON.stringify(data)); } catch (e) {}
-    if (TRAINEE && Sync.enabled()) { var M = model(); data.pct = M.pct; data.count = M.count; data.total = M.total; Sync.push(TRAINEE, data); state.synced = true; }
+    // Only send to the sheet when ticks or questions change, not when switching modules.
+    var sig = JSON.stringify([state.done, state.qa]);
+    if (TRAINEE && Sync.enabled() && sig !== lastSig) { lastSig = sig; var M = model(); data.pct = M.pct; data.count = M.count; data.total = M.total; Sync.push(TRAINEE, data); state.synced = true; }
   }
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
 
