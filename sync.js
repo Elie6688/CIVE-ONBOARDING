@@ -1,10 +1,10 @@
 // Shared progress through a Google Form (writes) and its published Google Sheet (reads).
 // Until these four values are filled in, progress stays in each browser only.
 var SYNC = {
-  formAction: '',   // https://docs.google.com/forms/d/e/<form id>/formResponse
-  nameEntry: '',    // entry.<number> of the "Trainee" question
-  dataEntry: '',    // entry.<number> of the "Progress data" question
-  sheetCsv: ''      // the response sheet published to the web as CSV (File > Share > Publish to web > CSV)
+  formAction: 'https://docs.google.com/forms/d/e/1FAIpQLScKZGrJT8A0fMvNicTCULT5wEZAmyzrBaq4ZjM7LkqfmD9aPg/formResponse',   // https://docs.google.com/forms/d/e/<form id>/formResponse
+  nameEntry: 'entry.611276276',    // entry.<number> of the "Trainee" question
+  dataEntry: 'entry.2020538090',    // entry.<number> of the "Progress data" question
+  sheetCsv: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTxLKSWZJ0ybfwliKeeegRR3lQldYA5CXZTl1MgdZglUhRJ6l45Wniunm3b7hHPNro6yx0whZo4GxKb/pub?output=csv'      // the response sheet published to the web as CSV (File > Share > Publish to web > CSV)
 };
 
 var Sync = (function () {
