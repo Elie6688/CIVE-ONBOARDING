@@ -19,6 +19,7 @@ var MODULES = [
     videos: [] },
   { num: 2, short: 'Finding the code: UpCodes', title: 'Finding the code: UpCodes navigation and Copilot search',
     goal: 'Before the ArchiCorner code videos, learn the tool we use to read codes. UpCodes puts the IBC, IECC, accessibility standards and local amendments in one searchable place, filtered to the project location. Learn to navigate it, search it, ask Copilot questions (then open and read the section it cites), and find building products. Keep UpCodes open during every video after this.',
+    resTitle: 'Code websites',
     resources: [
       { title: 'UpCodes website', text: 'Search the codes adopted by each city and county, with local amendments, and ask Copilot. Sign in with your CIVE account.', url: 'https://up.codes', cta: 'Open UpCodes' },
       { title: 'IBC 2021 (model code, not amended) on ICC Digital Codes', text: 'The original 2021 International Building Code as published by the ICC, with no local amendments. Compare it with the adopted version in UpCodes.', url: 'https://codes.iccsafe.org/content/IBC2021P2', cta: 'Open IBC 2021' },
@@ -34,6 +35,14 @@ var MODULES = [
     ] },
   { num: 3, short: 'Occupancy, construction type & podiums', title: 'Reading the IBC: occupancy, construction type, height & area',
     goal: 'The first questions of every commercial code analysis: which AHJ and code edition apply, what the occupancy groups are and how mixed uses are handled, and which construction type you need. Then how a podium building stacks two construction types, and how all of this sets the allowable height and area.',
+    noteTitle: 'Watch with the code open',
+    note: 'Open the IBC on a second screen, in UpCodes or ICC Digital Codes, while you watch each video. Each time the video mentions a section or a table, find it in the code and read it yourself. You will learn where things are in the code, how it is written (“shall”, “permitted”, exceptions) and how to read its tables, such as Table 504.3 (allowable height in feet), Table 504.4 (number of stories), Table 506.2 (allowable area) and Table 508.4 (occupancy separations).',
+    resTitle: 'Code websites',
+    resources: [
+      { title: 'UpCodes website', text: 'Search the codes adopted by each city and county, with local amendments, and ask Copilot. Sign in with your CIVE account.', url: 'https://up.codes', cta: 'Open UpCodes' },
+      { title: 'IBC 2021 (model code, not amended) on ICC Digital Codes', text: 'The original 2021 International Building Code as published by the ICC, with no local amendments. Compare it with the adopted version in UpCodes.', url: 'https://codes.iccsafe.org/content/IBC2021P2', cta: 'Open IBC 2021' },
+      { title: 'ICC Digital Codes: all the national model codes', text: 'The International Code Council (ICC) publishes the original model codes: IBC, IRC, IFC, IECC, IEBC, IPC, IMC and more. Use it to read a code as written before any AHJ amends it.', url: 'https://codes.iccsafe.org', cta: 'Open ICC codes' }
+    ],
     live: { title: 'Session 2A · Building codes and code analysis', topics: 'AHJs in Texas · adopted code editions · Chapter 3 occupancy groups · Chapter 6 construction types and cost per sq ft · mixed and separated occupancies', deck: 'CIVE_Design_training_02 · slides 1–27' },
     videos: [
       { url: yt('El6m6avZkW0'), ch: AC, title: 'AC 001 · Intro', why: 'Meet the channel and how its code videos are organized. You will follow this series through Module 6.' },
