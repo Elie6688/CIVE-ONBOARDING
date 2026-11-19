@@ -68,7 +68,7 @@ var STORE_KEY = KEY + (TRAINEE ? '-' + TRAINEE.toLowerCase() : '');
         : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>') +
       '</button></div></div></section>' +
       '<header class="head"><div class="head-left"><h2 class="ready">Ready to start?</h2>' +
-      '<p class="muted">Eleven modules, from how US practice works to reading a CIVE set and the design set checklists, each paired with videos and live sessions. Your progress and questions are saved in this browser, so you can stop and come back at any time.</p>' +
+      '<p class="muted">Eleven modules, from how US practice works to reading a CIVE set and the CIVE standards and checklists, each paired with videos and live sessions. Your progress and questions are saved in this browser, so you can stop and come back at any time.</p>' +
       '<div><button class="primary big" data-a="start">' + (M.count > 0 ? 'Continue the training' : 'Start the training') + ' →</button></div></div>' + progressCard(M) + '</header>';
   }
 
