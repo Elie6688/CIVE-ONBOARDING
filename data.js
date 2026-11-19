@@ -56,7 +56,8 @@ var MODULES = [
       { url: yt('mZnpO_eswkM'), ch: PD, title: 'Codes Series · Podium Construction', why: 'The code provisions that allow a podium (IBC 510.2) and what the podium must meet.' },
       { url: 'https://www.youtube.com/watch?v=o1BqXmWfgBc&t=207s', ch: PD, title: 'Design of Wood-Over-Concrete Podium Structures', why: 'How wood-over-concrete podium buildings are designed in practice, a common mixed-use and multifamily type. Starts at 3:27.' },
       { url: yt('iDoXA3UcYiI'), ch: AC, title: 'AC 039 · Determining allowable area for multi-occupancy and multi-story buildings', why: 'How occupancy and construction type turn into a maximum floor area.' },
-      { url: yt('I4e8JPzPx8g'), ch: AC, title: 'AC 056 · Building Separation Requirements', why: 'How distance between buildings and to property lines affects walls and openings.' }
+      { url: yt('I4e8JPzPx8g'), ch: AC, title: 'AC 056 · Building Separation Requirements', why: 'How distance between buildings and to property lines affects walls and openings.' },
+      { url: 'https://acc.autodesk.com/docs/files/projects/839b56c2-451d-42f6-806c-27d1df84af02?folderUrn=urn%3Aadsk.wipprod%3Afs.folder%3Aco.FeyVdoQ2TDeS0fYJbqT6mg&entityId=urn%3Aadsk.wipprod%3Adm.lineage%3ACkmTKtzbRByJDh7bda5fNQ&viewModel=detail&moduleId=folders', where: 'opens Autodesk Construction Cloud', cta: 'Watch', ch: CV, title: 'Calculating allowable exterior wall openings in Revit (CIVE video)', why: 'How CIVE calculates the allowable area of openings in each exterior wall in Revit, from the fire separation distance and IBC Table 705.8, and shows it on the code sheets.' }
     ] },
   { num: 4, short: 'Fire ratings & egress', title: 'Fire-rated assemblies, shafts and means of egress',
     resources: [
