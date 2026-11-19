@@ -158,7 +158,8 @@ var MODULES = [
       { url: yt('dHkLeJp1Of0'), ch: AS, title: 'Leak-free stucco parapets for any climate', why: 'The parapet detail again, this time with stucco cladding.' },
       { url: yt('nZjdJ97Le1Y'), ch: 'Envelope', title: 'Roof parapet metal coping', why: 'How the metal coping caps the parapet: sloped top, cleats, drip edges and how the roof membrane laps under it.' },
       { url: yt('50FQpdnT-64'), ch: 'Building science', title: 'Essentials of good indoor air quality', why: 'Ventilation, filtration and source control: the Welfare part of HSW once the envelope is tight.' },
-      { url: yt('_Py8_IYJahs'), ch: AS, title: 'The unintended consequences of energy efficiency', why: 'Tighter, better-insulated buildings bring new moisture risks. This prepares you for energy compliance.' }
+      { url: yt('_Py8_IYJahs'), ch: AS, title: 'The unintended consequences of energy efficiency', why: 'Tighter, better-insulated buildings bring new moisture risks. This prepares you for energy compliance.' },
+      { url: 'https://acc.autodesk.com/docs/files/projects/839b56c2-451d-42f6-806c-27d1df84af02?folderUrn=urn%3Aadsk.wipprod%3Afs.folder%3Aco.-JLi6YcqQim0BEzG5SSWwg&entityId=urn%3Aadsk.wipprod%3Adm.lineage%3AuOn5dMPBQce9ihXp2PjP6w&viewModel=detail&moduleId=folders', where: 'opens Autodesk Construction Cloud', cta: 'Watch', ch: CV, title: 'Building envelope detailing at CIVE (CIVE video)', why: 'How CIVE details the building envelope on its projects: wall sections, the water-resistive and air barriers, flashing at openings, roofs and parapets. It puts the videos in this module into practice.' },
     ] },
   { num: 8, short: 'Energy code: COMcheck', title: 'Energy code compliance with COMcheck',
     goal: 'In DD we check the envelope, lighting and mechanical systems against the IECC (or ASHRAE 90.1) using COMcheck. This walkthrough recorded at CIVE shows how we set up and run a COMcheck report on our projects.',
