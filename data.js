@@ -209,7 +209,13 @@ var MODULES = [
       { url: 'https://acc.autodesk.com/docs/files/projects/f7fa77bd-93e5-4a90-88d7-9a8eb73bbf71?folderUrn=urn%3Aadsk.wipprod%3Afs.folder%3Aco.Sx7X3cBeSaiW6yA_6ytt_A&entityId=urn%3Aadsk.wipprod%3Adm.lineage%3A-Fs7pDWMSeKbjnyGFu6cnQ&viewModel=detail&moduleId=folders', where: 'opens Autodesk Construction Cloud', cta: 'Open book', ch: CV, title: 'Exercise: where two fire-rated assemblies meet (the Wood Book)', why: 'A rated wall is only as good as its intersections. Learn how the rating carries through where two different fire-rated assemblies meet, such as a rated wall at a rated floor or roof.', list: { title: 'Exercise', items: [
           'Open the Wood Book and go through all of its details.',
           'Then focus on page 3 (PDF page 9) and pages 24 and 25.',
-          'Page 3 is the Wall Priority Legend (detail GN 103). It ranks walls from highest to lowest priority: 1) 2-hour fire and smoke wall, 2) 2-hour fire wall and 2-hour shaft wall, 3) 1-hour fire and smoke wall, 4) 1-hour fire wall, 5) non-rated wall.',
+          { text: 'Page 3 is the Wall Priority Legend (detail GN 103). It ranks walls from highest to lowest priority:', sub: [
+            'Priority 1: 2-hour fire and smoke wall',
+            'Priority 2: 2-hour fire wall and 2-hour shaft wall',
+            'Priority 3: 1-hour fire and smoke wall',
+            'Priority 4: 1-hour fire wall',
+            'Priority 5: non-rated wall'
+          ] },
           'Where two walls meet, the higher-priority wall stays continuous and the lower-priority wall stops and butts into it.',
           'Check how the details on pages 24 and 25 follow this rule.',
           'For each detail, note which wall is continuous, how the joint is protected and which UL design numbers apply.'

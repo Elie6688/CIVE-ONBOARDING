@@ -111,3 +111,4 @@ h1, h2, h3 { margin:0; }
 .vlist-h { font-weight:700; font-size:14px; color:#1A3F9E; margin-bottom:6px; }
 .vlist ul { margin:0; padding-left:20px; display:flex; flex-direction:column; gap:4px; }
 .vlist li { font-size:13.5px; color:#3D4048; }
+.vlist ul.vsub { margin:4px 0 0; padding-left:20px; gap:2px; list-style:circle; }
